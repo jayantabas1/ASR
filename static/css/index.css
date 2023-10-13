@@ -1,0 +1,170 @@
+/**
+ * Copyright Flexday Solutions LLC, Inc - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * See file LICENSE.txt for full license details.
+ * 
+ */
+/* Style the heading */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the buttons container */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the recording button */
+.record-button {
+    width: 65px;
+    height: 65px;
+    font-size: 0;
+    background-color: red;
+    border: 0;
+    border-radius: 35px;
+    margin: 18px;
+    outline: none;
+    cursor: pointer;
+}
+.notRec{
+	background-color: darkred;
+    background-image: url('/static/images/play.png');
+    background-size: cover; /* Adjust the size to cover the entire element */
+    background-repeat: no-repeat;
+}
+
+.Rec{
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    background-image: url('/static/images/pause.png');
+    background-size: cover; /* Adjust the size to cover the entire element */
+    background-repeat: no-repeat;
+}
+
+@keyframes pulse{
+	0%{
+		box-shadow: 0px 0px 5px 0px rgba(173,0,0,.3);
+	}
+	65%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,.3);
+	}
+	90%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
+	}
+}
+
+/* .play-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px 18px;
+    font-size: 22px;
+    cursor: pointer;
+} */
+
+/* Style the translate button */
+
+/* Style the transcription textareas */
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    resize: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Center the transcription textareas */
+.transcription-container {
+    width: '500px';
+    text-align: center;
+}
+.parent-container{
+    width: 500px !important;
+}
+.container{
+    display: flex;
+    align-items: 'center';
+    justify-content: center;
+}
+
+/* Add some spacing between elements */
+.spacing {
+    margin-top: 20px;
+}
+
+audio#audio {
+    width: -webkit-fill-available;
+}
+.translateButton {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    /* margin: 0; */
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+  
+  .translateButton:hover,
+  .translateButton:focus {
+    background-color: #07c;
+  }
+  
+  .translateButton:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  }
+  
+  .translateButton:active {
+    background-color: #0064bd;
+    box-shadow: none;
+  }
+
+  @keyframes bouncing-loader {
+    to {
+        opacity: 0.1;
+        transform: translate3d(0, -1rem, 0);
+    }
+}
+.bouncing-loader {
+    display: flex;
+    justify-content: center;
+}
+.bouncing-loader > div {
+    width: 1rem;
+    height: 1rem;
+    margin: 3rem 0.2rem;
+    background: #0095ff;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+}
+.bouncing-loader > div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.bouncing-loader > div:nth-child(3) {
+    animation-delay: 0.4s;
+}

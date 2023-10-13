@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Recorder and Transcription</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <!-- <h1>SeamlessM4T</h1> -->
+    <h1>Whisper Open AI</h1>
+<!-- Audio Recording and Translate Buttons Container -->
+<div class="button-container">
+    <button class="record-button" id="recordButton"></button> <!-- Microphone emoji for recording -->
+</div>
+
+<!-- Display Transcription Results -->
+<div class = 'container'  >
+    
+    <div class = "parent-container">
+        <div>
+            <audio id="audio" controls=""></audio>
+        </div>
+        <div>
+            <button id="translateButton" class="translateButton" >Translate</button>
+        </div>
+        <div class="transcription-container">
+            <div class="bouncing-loader" id = "bouncing-loader" style="display: none;">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            <div>
+                <!-- <label>Translation in English</label> -->
+                <label>Translation</label>
+            </div>
+            <div>
+                <!-- <textarea id="realTimeTranscription" name="realTimeTranscription"  readonly> </textarea> -->
+                <textarea id="translation1" name="translation1" readonly>
+                    
+                </textarea>
+            </div>
+            <div class="transcription-container">
+                <!-- <label>Translation in Assamese</label> -->
+                <label>Transcription</label>
+            </div>
+            <div>
+                <textarea id="translation2" name="translation2" readonly>
+                    
+                </textarea>
+            </div>
+
+            </div>
+            
+        </div>
+        </div>
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/whisper.js') }}"></script>
+</body>
+</html>
